@@ -29,9 +29,21 @@ function whoAreTheWinner() {
     }
 }
 
-function getScoreP1() {}
+function getScoreP1() {
+    if (scoreJ1 != goal.value && scoreJ2 != goal.value){
+        scoreJ1++;
+    }
 
-function getScoreP2() {}
+    scoreJ1.textContent = defaultScoreJ1;
+    whoAreTheWinner();
+}
+
+function getScoreP2() {
+    if (scoreJ2 != goal.value && scoreJ1 != goal.value){
+        scoreJ2++;
+    }
+    scoreJ2.textContent = defaultScoreJ2;
+    whoAreTheWinner();
 
 function newGame() {}
 
