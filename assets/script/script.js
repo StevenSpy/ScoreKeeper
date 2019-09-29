@@ -22,7 +22,7 @@ function whoAreTheWinner() {
         scoreJ2.style.color= "Red";
 
     }
-    else (scoreJ2 == goal.value;){
+    else (scoreJ2 == goal.value){
         winner.textContent = "Joueur 2";
         scoreJ1.style.color= "Red";
         scoreJ2.style.color= "Green";
@@ -45,6 +45,19 @@ function getScoreP2() {
     scoreJ2.textContent = defaultScoreJ2;
     whoAreTheWinner();
 
-function newGame() {}
+function newGame() {
+    scoreJ1.textContent=0;
+    scoreJ2.textContent=0;
+    defaultScoreJ1=0;
+    defaultScoreJ2=0;
+    winScore = 10;
+    winner.textContent="xxxx";
+    goal.value=10;
+    scoreJ1.style.color=null;
+    scoreJ2.style.color=null;
+}
 
+J1Button.addEventListener("click", getScoreP1);
+J2Button.addEventListener("click", getScoreP2);
 goal.addEventListener("change", writeScoreToReach);
+resetButton.addEventListener("click", newGame);
