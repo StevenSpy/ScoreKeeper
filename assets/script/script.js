@@ -15,7 +15,19 @@ function writeScoreToReach() {
   winScore.textContent = goal.value;
 }
 
-function whoAreTheWinner() {}
+function whoAreTheWinner() {
+    if (scoreJ1 == goal.value){
+        winner.textContent = "Joueur 1";
+        scoreJ1.style.color= "Green";
+        scoreJ2.style.color= "Red";
+
+    }
+    else (scoreJ2 == goal.value;){
+        winner.textContent = "Joueur 2";
+        scoreJ1.style.color= "Red";
+        scoreJ2.style.color= "Green";
+    }
+}
 
 function getScoreP1() {}
 
