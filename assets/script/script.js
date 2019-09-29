@@ -8,3 +8,13 @@ const winner = document.querySelector(".winner");
 const J1Button = document.querySelector(".J1");
 const J2Button = document.querySelector(".J2");
 const resetButton = document.querySelector(".reset");
+
+function writeScoreToReach() {}
+
+function whoAreTheWinner() {}
+
+function getScoreP1() {}
+
+function getScoreP2() {}
+
+function newGame() {}
