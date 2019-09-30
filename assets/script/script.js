@@ -12,34 +12,34 @@ const J2Button = document.querySelector(".J2");
 const resetButton = document.querySelector(".reset");
 
 function writeScoreToReach() {
-  winScore.innerText = goal.value;
+  winScore.textContent = goal.value;
 }
 
 function whoAreTheWinner() {
   if (scoreJ1 == goal.value) {
-    winner.innerText = "Joueur 1";
-    scoreJ1.style.color = "Green";
-    scoreJ2.style.color = "Red";
+    winner.textContent = "Joueur 1";
+    scoreJ1.style.color = "green";
+    scoreJ2.style.color = "red";
   }
   if (scoreJ2 == goal.value) {
-    winner.innerText = "Joueur 2";
-    scoreJ1.style.color = "Red";
-    scoreJ2.style.color = "Green";
+    winner.textContent = "Joueur 2";
+    scoreJ1.style.color = "red";
+    scoreJ2.style.color = "green";
   }
 }
 
 function getScoreP1() {
-  if (scoreJ1 < goal.value && scoreJ2 < goal.value) {
-    scoreJ1++;
+  if (defaultScoreJ1 != goal.value && defaultScoreJ2 != goal.value) {
+    defaultScoreJ1++;
   }
 
-  scoreJ1.innerText = defaultScoreJ1;
+  scoreJ1.textContent = defaultScoreJ1;
   whoAreTheWinner();
 }
 
 function getScoreP2() {
-  if (scoreJ2 < goal.value && scoreJ1 < goal.value) {
-    scoreJ2++;
+  if (defaultScoreJ2 < goal.value && defaultScoreJ1 < goal.value) {
+    defaultScoreJ2++;
   }
   scoreJ2.innerText = defaultScoreJ2;
   whoAreTheWinner();
